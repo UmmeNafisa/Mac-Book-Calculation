@@ -16,7 +16,7 @@
 
 <body>
     <section class="container mt-5">
-        <div class="d-flex justify-content-between">
+        <div class="d-lg-flex justify-content-between d-sm-block d-md-flex">
             <div>
                 <img src="images/mac.png" class="img-fluid px-5" alt="">
             </div>
@@ -58,16 +58,16 @@
                         $20</button>
                 </div>
                 <!-- price part -->
-                <div class="cart-item">
-                    <div class="row g-0">
-                        <div class="col-md-8">
+                <div class="cart-item w-75">
+                    <div class="row g-4 g-lg-0">
+                        <div class="col-lg-6 col-6 w-50">
                             <h5 class="border-bottom pb-3">Best price </h5>
                             <h5 class="border-bottom pb-3">Extra Memory Cost</h5>
                             <h5 class="border-bottom pb-3">Extra Storage Cost</h5>
                             <h5 class="border-bottom pb-3 border-dark border-2">Delivery charge</h5>
                             <h5 class="border-bottom pb-3">Total price</h5>
                         </div>
-                        <div class="col-md-4 status ">
+                        <div class="col-lg-6 col-6 status w-25">
                             <h5 class="border-bottom pb-3">$ <span id="best-price"> 1299</span></h5>
                             <h5 class="border-bottom pb-3">$ <span id="memory-cost">0</span></h5>
                             <h5 class="border-bottom pb-3">$ <span id="storage-cost"> 0</span></h5>
@@ -82,7 +82,8 @@
                     <h5>Add Promo Code</h5>
                     <input type="text" name="" id="promo-code-input">
                     <button type="button" class="btn btn-danger" id="promo-btn">Apply</button>
-                    <p id="invalid-promo"> Sorry...!! Invalid promo Code </p>
+                    <p id="invalid-promo"> ❌ Sorry...!! Invalid promo Code </p>
+                    <p id="promo-applied"> ✅ Promo Code Applied </p>
 
                 </div>
             </div>

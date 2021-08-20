@@ -62,13 +62,18 @@ function promoCode() {
     const promoCodeValue = promoInput.value;
     const finalTotal = document.getElementById("big-total");
     const finalTotalCost = finalTotal.innerText;
+    //promo msg
+    const invalidMsg = document.getElementById("invalid-promo");
+    const promoApply = document.getElementById("promo-applied");
     if (promoCodeValue === "stevekaku") {
-        finalTotal.innerText = parseInt(finalTotalCost) - (parseInt(finalTotalCost) * (20 / 100));
+        finalTotal.innerText = parseFloat(finalTotalCost) - (parseFloat(finalTotalCost) * (20 / 100));
         promoInput.value = "";
         document.getElementById("promo-btn").disabled = true;
+        invalidMsg.style.display = "none";
+        promoApply.style.display = "block";
     } else {
-        const invalidMsg = document.getElementById("invalid-promo");
         invalidMsg.style.display = "block";
+        promoApply.style.display = "none";
     }
 }
 //promo-btn handler
