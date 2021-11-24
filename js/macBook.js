@@ -1,48 +1,34 @@
 // memory, storage & delivery cost func
 function extraItemCost(extraItem, types) {
     const extraCost = document.getElementById(extraItem + "-cost");
-    if (types == "16GB") {
-        extraCost.innerText = 180;
-    } else if (types == "8GB") {
-        extraCost.innerText = 0;
-    } else if (types == "256GB") {
-        extraCost.innerText = 0;
-    } else if (types == "512GB") {
-        extraCost.innerText = 100;
-    } else if (types == "1TB") {
-        extraCost.innerText = 180;
-    } else if (types == "free") {
-        extraCost.innerText = 0;
-    } else if (types == "cost") {
-        extraCost.innerText = 20;
-    }
+    extraCost.innerText = types;
     totalCost();
 }
 //memory-btn handler
 document.getElementById("memory1-btn").addEventListener("click", function () {
-    extraItemCost("memory", "8GB");
+    extraItemCost("memory", 0);
 })
 document.getElementById("memory2-btn").addEventListener("click", function () {
-    extraItemCost("memory", "16GB");
+    extraItemCost("memory", 180);
 })
 
 //storage-btn handler
 document.getElementById("storage1-btn").addEventListener("click", function () {
-    extraItemCost("storage", "256GB");
+    extraItemCost("storage", 0);
 })
 document.getElementById("storage2-btn").addEventListener("click", function () {
-    extraItemCost("storage", "512GB");
+    extraItemCost("storage", 100);
 })
 document.getElementById("storage3-btn").addEventListener("click", function () {
-    extraItemCost("storage", "1TB");
+    extraItemCost("storage", 180);
 })
 
 //delivery-btn handler
 document.getElementById("delivery1-btn").addEventListener("click", function () {
-    extraItemCost("delivery", "free");
+    extraItemCost("delivery", 0);
 })
 document.getElementById("delivery2-btn").addEventListener("click", function () {
-    extraItemCost("delivery", "cost");
+    extraItemCost("delivery", 20);
 })
 
 //total-cost 
